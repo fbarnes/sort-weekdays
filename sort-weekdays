@@ -1,0 +1,64 @@
+function sort_weekdays ( $days ) {
+    
+    // parameter should be a simple array of days of the week
+
+    $monday = false;
+    $tuesday = false;
+    $wednesday = false;
+    $thursday = false;
+    $friday = false;
+    $saturday = false;
+    $sunday = false;
+    
+    foreach ($days as $day) {
+        switch (strtolower($day)) {
+            case "monday": 
+                $monday = true;
+                break;
+            case "tuesday": 
+                $tuesday = true;
+                break;
+            case "wednesday": 
+                $wednesday = true;
+                break;
+            case "thursday": 
+                $thursday = true;
+                break;
+            case "friday": 
+                $friday = true;
+                break;
+            case "saturday": 
+                $saturday = true;
+                break;
+            case "sunday": 
+                $sunday = true;
+                break;
+        }
+    }
+
+    // order of these lines determinues order of string returned
+    if ( $monday ) {
+        $ordered_days[] = "Monday"; 
+    }
+    if ( $tuesday ) { 
+        $ordered_days[] = "Tuesday"; 
+    }
+    if ( $wednesday ) {
+        $ordered_days[] = "Wednesday"; 
+    }
+    if ( $thursday ) { 
+        $ordered_days[] = "Thursday"; 
+    }
+    if ( $friday ) { 
+        $ordered_days[] = "Friday"; 
+    }
+    if ( $saturday ) {
+        $ordered_days[] = "Saturday"; 
+    }
+    if ( $sunday ) { 
+        $ordered_days[] = "Sunday"; 
+    }
+
+    return $ordered_days;
+        
+}
